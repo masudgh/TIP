@@ -2,7 +2,26 @@ package com.homework;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+eg. Input: "hello"
+Output:
+[h, e, l, l, o]
+[h, e, l, lo]
+[h, e, ll, o]
+[h, e, llo]
+[h, el, l, o]
+[h, el, lo]
+[h, ell, o]
+[h, ello]
+[he, l, l, o]
+[he, l, lo]
+[he, ll, o]
+[he, llo]
+[hel, l, o]
+[hel, lo]
+[hell, o]
+[hello]
+ */
 public class HW12AllSubsString {
 
 

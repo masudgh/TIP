@@ -1,8 +1,18 @@
 package com.homework;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+
+/*
+Input phonenumber(string) return all possible string representation of the phone number.
+char[] getStringForNumber(int d)
+getStringForNumber(3) -> D,E,F
+
+
+See attached image.
+
+getStringForNumber(234) -> ADG, AEG, AFG, BDG, BEG, BFG, .....
+ */
 
 public class HW11PhoneNumber {
 

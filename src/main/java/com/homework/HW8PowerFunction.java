@@ -1,8 +1,15 @@
 package com.homework;
 
 /*
-mplement a power function to raise a double to an int power, including negative powers.
+Implement a power function to raise a double to an int power, including negative powers.
 e.g. pow(double d, int p) should give 'd' raised to power 'p'.
+Of course, please don't use in-built methods like pow(). Idea is to implement that using
+recursion.
+
+Solution: http://stackoverflow.com/questions/101439/the-most-efficient-way-to-implement-aninteger-
+based-power-function-powint-int
+Can you do it in O(log n)
+Suggested time: 10 minutes to do a brute-force and 15 with a trick that optimizes it.
  */
 
 public class HW8PowerFunction {

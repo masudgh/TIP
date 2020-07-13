@@ -1,5 +1,15 @@
 package com.homework;
 
+/*
+Imagine a Robot sitting on the upper left corner of a grid with rows and columns.
+The robot can only move in two directions, right and down. While moving the Robot can
+accumulate points which are numbers in the grid. Give the maximum sum the Robot can accumulate
+starting from the upper left corner to the bottom right of the grid.
+
+Recursive Solution:
+https://github.com/iqbalzaveri/namcctip/blob/master/com/recursion/MaxSumInMatrix.java
+
+ */
 public class HW6MatrixMaxSum {
 
     public int maxSumInMatrix(int[][] matrix) {
