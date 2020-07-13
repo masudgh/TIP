@@ -1,5 +1,16 @@
 package com.homework;
 
+/*
+Given a number n, print n-th Fibonacci Number using Recursion. Create a Recursion Tree to support
+your solution.
+Examples:
+
+Input  : n = 2
+Output : 1
+
+Input  : n = 9
+Output : 34
+ */
 public class HW3Fibonacci {
 
     public void printFibonacci (int n) {

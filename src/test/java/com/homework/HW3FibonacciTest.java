@@ -10,7 +10,7 @@ public class HW3FibonacciTest {
     @Test
     public void printFibonacci() {
         fibonacci.printFibonacci(2);
-        fibonacci.printFibonacci(9);
+        fibonacci.printFibonacci(4);
         fibonacci.printFibonacci(21);
     }
 }
