@@ -11,8 +11,10 @@ public class Prob5GroupSumClumpTest {
     @Test
     public void groupSumClump() {
 
-        int [] arr ={8, 2, 2, 1};
-        assertTrue(groupSum.groupSumClump(0, arr,9));
+        int [] arr ={2, 4, 4, 8};
+        boolean flag = groupSum.groupSumClump(0, arr,14);
+        System.out.println(flag);
+
        // assertFalse();
     }
 }

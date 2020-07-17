@@ -10,8 +10,13 @@ public class Prob4GroupSum5Test {
 
     @Test
     public void groupSum5() {
-  /*      int [] list1 = {2, 5, 10, 4};
+        int [] list1 = {2, 5, 10, 4};
+        int [] list2 = {3,5,1};
 
+        boolean flag = sum5.groupSum5(0,list2,4);
+
+        System.out.println(flag);
+        /*
         assertTrue(sum5.groupSum5(0,list1,19));
         assertTrue(sum5.groupSum5(0,list1,17));
         assertFalse(sum5.groupSum5(0,list1,12)); */
