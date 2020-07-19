@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class HW6MatrixMaxSumTest {
     HW6MatrixMaxSum maxSum = new HW6MatrixMaxSum();
+    HW6MatrixMaxSum2 maxSum2 = new HW6MatrixMaxSum2();
 
     @Test
     public void maxSumInMatrix() {
@@ -19,5 +20,7 @@ public class HW6MatrixMaxSumTest {
         assertEquals(maxSum.maxSumInMatrix(arr2),6);
         assertEquals(maxSum.maxSumInMatrix(arr3),29);
         assertEquals(maxSum.maxSumInMatrix(arr4),18);
+
+        assertEquals(maxSum2.maxSumInMatrix(arr1),9);
     }
 }
