@@ -26,25 +26,27 @@ public class HW8PowerFunction {
     }
 
 
-   /* double  pow (double base, int exp){
+    double powOptimize(double base, int exp){
         if(exp ==0) return 1;
         if(exp ==1) return base;
-        if(exp ==2) return base*base;
 
-        int n = exp/2;
-        pow ( base,  exp,  n);
+        double powerVal = powOptimize(base, exp/2);
+
+        if(exp%2==0) {
+            if(exp>0)
+                return powerVal*powerVal;
+            else
+                return 1/(powerVal*powerVal);
+        }
+
+        else{
+            if(exp>0)
+                return base*powerVal*powerVal;
+            else
+                return 1/(base*powerVal*powerVal);
+        }
 
     }
 
-    double  pow (double base, int exp, int n) {
 
-
-
-
-        if(exp>0)
-            return powBrut ( base,  exp-1)* base;
-        else
-            return 1/(powBrut ( base,  -exp-1)* base);
-
-    }*/
 }

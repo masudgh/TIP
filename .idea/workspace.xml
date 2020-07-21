@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc8871c-5de3-416b-b894-bba2dc475595" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/homework/HW5GroupSum.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homework/HW5GroupSum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/homework/HW8PowerFunction.java" afterPath="$PROJECT_DIR$/src/main/java/com/homework/HW8PowerFunction.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -64,69 +49,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinarySearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/treeWork/BinarySearch.java">
+      <file leaf-file-name="HW8PowerFunction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/HW8PowerFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state relative-caret-position="328">
+              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeIteratorImp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java">
+      <file leaf-file-name="HW8PowerFunctionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/homework/HW8PowerFunctionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="106" column="10" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#1665#1666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeTraversal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HW9WildCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/HW9WildCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HW9WildCardTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/homework/HW9WildCardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/src.zip!/java/util/Queue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2475">
-              <caret line="198" column="6" lean-forward="false" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
+            <state relative-caret-position="120">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -362,6 +299,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/homework/HW8PowerFunction.java" />
       </list>
     </option>
   </component>
@@ -543,7 +481,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.HW9WildCardTest">
+  <component name="RunManager" selected="Gradle.HW8PowerFunctionTest.pow">
+    <configuration name="HW8PowerFunctionTest.pow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.homework.HW8PowerFunctionTest.pow&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+    </configuration>
     <configuration name="HW9WildCardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -731,19 +687,21 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Gradle.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Application.TreeTraversal" />
       <item index="2" class="java.lang.String" itemvalue="Application.TreeTraversal (1)" />
       <item index="3" class="java.lang.String" itemvalue="Application.TreeIteratorImp" />
       <item index="4" class="java.lang.String" itemvalue="Gradle.HW9WildCardTest" />
+      <item index="5" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.HW9WildCardTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TreeIteratorImp" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TreeTraversal (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TreeTraversal" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.HW9WildCardTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TreeIteratorImp" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TreeTraversal (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TreeTraversal" />
       </list>
     </recent_temporary>
   </component>
@@ -770,12 +728,16 @@
     <history-entry file="HW6MatrixMaxSumTest_maxSumInMatrix - 2020.07.17 at 17h 38m 36s.xml">
       <configuration name="HW6MatrixMaxSumTest.maxSumInMatrix" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HW8PowerFunctionTest_pow - 2020.07.21 at 00h 50m 52s.xml">
+      <configuration name="HW8PowerFunctionTest.pow" configurationId="GradleRunConfiguration" />
+    </history-entry>
     <history-entry file="HW9WildCardTest - 2020.07.21 at 00h 19m 42s.xml">
       <configuration name="HW9WildCardTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1487" height="945" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -795,9 +757,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27889273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1127,6 +1089,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/homework/HW8PowerFunctionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/HW8PowerFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="26" />
           <folding />
         </state>
       </provider>
