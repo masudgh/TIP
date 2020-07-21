@@ -18,7 +18,7 @@ preferred i.e. without assuming there is a parent pointer
  */
 
 import java.util.Iterator;
-import java.util.function.Consumer;
+import java.util.Stack;
 
 public class TreeIteratorImp {
 
@@ -35,31 +35,44 @@ public class TreeIteratorImp {
 
     static class TreeIterator  implements Iterator {
 
-        Node node;
-        Node parent;
+        Stack<Node> hightStack = new Stack<>();
 
         public TreeIterator(Node node) {
-            this.node = node;
-            this.parent = null;
+            init(node);
+        }
+
+        private void init(Node node){
+            if(node !=null) {
+                hightStack.push(node);
+                init(node.left);
+            }
         }
 
         public boolean hasNext() {
-            return false;
+            return (hightStack.size() !=0);
         }
 
 
         public Node next() {
+            Node tmp = hightStack.pop();
 
-            return node.left;
+            if(tmp.right!=null ){
+                init(tmp.right);
+            }
+
+            return tmp;
         }
 
 
-        private Node getNext(){
+    }
 
+    static void iterateTree(Node root){
 
-            return node;
+        TreeIterator treeIterator = new TreeIterator(root);
+
+        while (treeIterator.hasNext()){
+           System.out.println( treeIterator.next().value + " ");
         }
-
 
     }
 
@@ -73,7 +86,7 @@ public class TreeIteratorImp {
           /     \
          5       20
         / \     /
-       1   3   16
+       1   6  16
 
      */
 
@@ -83,7 +96,7 @@ public class TreeIteratorImp {
         Node n3 = new Node (5);
         Node n4 = new Node (20);
         Node n5 = new Node (1);
-        Node n6 = new Node (3);
+        Node n6 = new Node (6);
         Node n7 = new Node (16);
         root.left = n1;
         root.right =n2;
@@ -91,10 +104,8 @@ public class TreeIteratorImp {
         n2.right =n4;
         n3.left = n5;
         n3.right =n6;
-        n6.left = n7;
+        n4.left = n7;
 
-        TreeIterator iterator = new TreeIterator(root);
-
-        iterator.next();
+        iterateTree(root);
     }
 }

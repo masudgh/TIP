@@ -79,73 +79,109 @@ public class TreeTraversal {
 
 
     // 4) Level order -use BFS, two queues method
-    static void printLevelOrder2(Node node) {
+    static void printLevelOrderTwoQueue(Node node) {
 
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(node);
+        if(node == null) return;
 
-        Queue<Node> queuePosition = new LinkedList<>();
-        queuePosition.add(node);
+        Queue<Node> queue1 = new LinkedList<>();
+        Queue<Node> queue2 = new LinkedList<>();
 
-        while(!queue.isEmpty()){
-            Node tmpNode = queue.remove();
-            System.out.print(" " + tmpNode.value);
+        queue1.add(node);
 
-            if (tmpNode.left != null) {
-                queue.add(tmpNode.left);
+
+        while( !queue1.isEmpty() || !queue2.isEmpty() ){
+
+
+
+            while(!queue1.isEmpty()){
+                if(queue1.peek().left !=null){
+                    queue2.add(queue1.peek().left);
+                }
+
+                if(queue1.peek().right !=null){
+                    queue2.add(queue1.peek().right);
+                }
+                System.out.print(queue1.peek().value+" ");
+                queue1.remove();
+
             }
 
-            if (tmpNode.right != null) {
-                queue.add(tmpNode.right);
-            }
-        }
-    }
+            System.out.println();
 
-    // 6) Level order --(use BFS, single queue using count)
-    static void printLevelOrder3(Node node) {
+            while(!queue2.isEmpty()){
 
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(node);
+                if(queue2.peek().left !=null){
+                    queue1.add(queue2.peek().left);
+                }
 
-        // 2^0 + 2^1 + …. 2^h = 2^(h+1)-1.
-        int count =0;
-        int level = 0;
-        double levelAgg =0;
-        while(!queue.isEmpty()){
+                if(queue2.peek().right !=null){
+                    queue1.add(queue2.peek().right);
+                }
+                System.out.print(queue2.peek().value+ " ");
+                queue2.remove();
 
-            Node tmpNode;
-            tmpNode = queue.remove();
-            System.out.print(" " + tmpNode.value);
-           // count++;
-
-
-            if( Math.pow(2,level)+levelAgg == count){
-                levelAgg +=  Math.pow(2,level);
-                System.out.println();
-                level ++;
             }
 
-
-
-
-            if (tmpNode.left != null) {
-                queue.add(tmpNode.left);
-                count++;
-            }else {
-                count+=2;
-            }
-
-
-            if (tmpNode.right != null) {
-                queue.add(tmpNode.right);
-                count++;
-            }else{
-                count+=2;
-            }
-
+            System.out.println();
         }
 
+
     }
+
+    // 5) Level order --(use BFS, single queue using count)
+    static void printLevelOrderUseOneQueandCount(Node node) {
+
+        if(node == null) return;
+
+        Queue<Node> q1 = new LinkedList<>();
+        q1.add(node);
+
+
+        while(true){
+
+            int levelNodeCount= q1.size();
+            if(levelNodeCount==0) break;
+
+            while(levelNodeCount>0) {
+
+
+                if (q1.peek().left != null) {
+                    q1.add(q1.peek().left);
+
+                }
+
+                if (q1.peek().right != null) {
+                    q1.add(q1.peek().right);
+
+                }
+
+                System.out.print(q1.peek().value + " ");
+                q1.remove();
+                levelNodeCount--;
+
+            }
+
+            System.out.println();
+
+        }
+
+
+    }
+
+    static void levelOrderPrintHelper(Node node, int level){
+
+        if(node == null) return ;
+
+        if(level ==1) {
+            System.out.print(" " + node.value);
+        } else if(level >1){
+            levelOrderPrintHelper(node.left, level-1);
+            levelOrderPrintHelper(node.right, level-1);
+        }
+
+    }
+
+
 
     public static void main (String [] ags){
 
@@ -175,7 +211,7 @@ public class TreeTraversal {
         n2.right =n4;
         n3.left = n5;
         n3.right =n6;
-        n6.left = n7;
+        n4.left = n7;
 
         System.out.println("Inorder print .....");
         printInOrder(root);
@@ -192,8 +228,21 @@ public class TreeTraversal {
         System.out.println("Level order print .....");
         printLevelOrder1(root);
 
+
         System.out.println();
-        System.out.println("Level order print .....");
-        printLevelOrder3(root);
+        System.out.println("Level order print line by line: use one queue and count.....");
+        printLevelOrderTwoQueue(root);
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Level order print line by line: use two queue.....");
+        printLevelOrderTwoQueue(root);
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Level order print line by line: use one queue.....");
+        printLevelOrderUseOneQueandCount(root);
+        System.out.println();
+
     }
 }
