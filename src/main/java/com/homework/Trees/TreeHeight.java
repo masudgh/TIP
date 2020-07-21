@@ -1,17 +1,8 @@
-package com.homework;
+package com.homework.Trees;
 
-/*
-
-The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes.
- This may or may not pass through the root node
-
-https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/
+public class TreeHeight {
 
 
- */
-public class HW14TreeDiameter {
-
-    static int maxDiameter =0;
 
     static class Node {
         Node left, right;
@@ -24,26 +15,30 @@ public class HW14TreeDiameter {
     }
 
 
-    static int calcDiameterOfTree(Node node){
-        maxDiameter =0;
-        calcDiameterOfTreeHelpder(node);
-        return maxDiameter;
-    }
 
-    static int calcDiameterOfTreeHelpder(Node node) {
-        int nodeLeft, nodeRight;
-        if (node != null) {
+    static int getHeight(Node node){
 
-            nodeLeft =  calcDiameterOfTreeHelpder(node.left);
-            nodeRight = calcDiameterOfTreeHelpder(node.right);
-            if (nodeLeft + nodeRight +1 > maxDiameter) maxDiameter = nodeLeft + nodeRight +1;
-
-        }else{
+        if(node == null ) {
             return 0;
-        }
+        } else {
+            int leftMax = 0;
+            int rightMax = 0;
 
-        return 1 + Math.max(nodeLeft, nodeRight);
+
+            leftMax = getHeight(node.left);
+            rightMax = getHeight(node.right);
+
+
+            if (leftMax > rightMax) {
+                return leftMax + 1;
+            } else {
+
+                return rightMax + 1;
+            }
+        }
     }
+
+
 
     public static void main (String [] ags) {
 
@@ -74,8 +69,11 @@ public class HW14TreeDiameter {
         n3.left = n5;
         n3.right = n6;
         n4.left = n7;
-        System.out.print(" THe maximum diameter is : ");
-        System.out.println(calcDiameterOfTree(root) ) ;
+
+
+        System.out.println(getHeight(root) ) ;
+
+
 
         /*
     Tree
@@ -107,15 +105,16 @@ public class HW14TreeDiameter {
         n3.right = n6;
         n6.left = n7;
 
-        System.out.print(" THe maximum diameter is : ");
-        System.out.println(calcDiameterOfTree(rootLeft) ) ;
+
+
+        System.out.println(getHeight(rootLeft) ) ;
 
 
         /*
     Tree
              4
-              \
-               3
+            / \
+           8   3
               /
              1
             / \
@@ -135,12 +134,13 @@ public class HW14TreeDiameter {
         n7 = new Node(10);
 
         rootRight.right = n1;
+        rootRight.left = n2;
         n1.left = n3;
         n3.left = n5;
         n3.right = n6;
         n6.left = n7;
 
-        System.out.print(" THe maximum diameter is : ");
-        System.out.println(calcDiameterOfTree(rootRight) ) ;
+
+        System.out.println(getHeight(rootRight) ) ;
     }
 }
