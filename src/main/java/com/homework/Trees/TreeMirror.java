@@ -1,6 +1,12 @@
 package com.homework.Trees;
 
+/*
+Check if two trees are Mirror
+Given two Binary Trees, write a function that returns true if two trees are mirror of each other, else false.
+For example, the function should return true for following input trees.
 
+https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/
+ */
 
 public class TreeMirror {
 

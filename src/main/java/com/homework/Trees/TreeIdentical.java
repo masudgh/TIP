@@ -1,5 +1,8 @@
 package com.homework.Trees;
 
+/*
+Give root node of two Binary Trees return True if they are indentical else false.
+ */
 public class TreeIdentical {
 
     static class Node {
