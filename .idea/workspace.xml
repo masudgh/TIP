@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc8871c-5de3-416b-b894-bba2dc475595" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHeight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTemplet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/homework/HW14TreeDiameter.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homework/HW14TreeDiameter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Trees/AllPath.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/homework/HW14TreeDiameter.java" afterPath="$PROJECT_DIR$/src/main/java/com/homework/HW14TreeDiameter.java" />
     </list>
@@ -59,11 +51,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AllPath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/AllPath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="110" column="7" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="110" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TreeHeight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHeight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="355">
+              <caret line="37" column="9" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -72,21 +76,9 @@
       <file leaf-file-name="HW14TreeDiameter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/HW14TreeDiameter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="19" />
+            <state relative-caret-position="477">
+              <caret line="92" column="7" lean-forward="false" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeTraversal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -328,6 +320,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTamplet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHight.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHeight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/homework/Trees/AllPath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/homework/HW14TreeDiameter.java" />
       </list>
     </option>
@@ -548,7 +541,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HW14TreeDiameter">
+  <component name="RunManager" selected="Application.AllPath">
+    <configuration name="AllPath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.homework.Trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.homework.Trees.AllPath" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="TP_main" />
+      <envs />
+    </configuration>
     <configuration name="HW14TreeDiameter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -592,24 +604,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;com.homework.HW8PowerFunctionTest.pow&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="HW9WildCardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests com.homework.HW9WildCardTest" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -755,19 +749,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Gradle.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.HW9WildCardTest" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.HW15ExpressionCreatorTest.printExpressionTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TreeHeight" />
-      <item index="5" class="java.lang.String" itemvalue="Application.HW14TreeDiameter" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.HW15ExpressionCreatorTest.printExpressionTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TreeHeight" />
+      <item index="4" class="java.lang.String" itemvalue="Application.HW14TreeDiameter" />
+      <item index="5" class="java.lang.String" itemvalue="Application.AllPath" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.HW14TreeDiameter" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TreeHeight" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.HW15ExpressionCreatorTest.printExpressionTest" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.HW9WildCardTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.AllPath" />
+        <item index="1" class="java.lang.String" itemvalue="Application.HW14TreeDiameter" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TreeHeight" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.HW15ExpressionCreatorTest.printExpressionTest" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.HW8PowerFunctionTest.pow" />
       </list>
     </recent_temporary>
   </component>
@@ -1151,16 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1524">
-          <caret line="106" column="10" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treeWork/BinarySearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1243,22 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTemplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="53" column="5" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTraversal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1269,10 +1237,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeIteratorImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeTemplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/TreeHeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/Trees/AllPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="110" column="7" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="110" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/homework/HW14TreeDiameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="19" />
+        <state relative-caret-position="477">
+          <caret line="92" column="7" lean-forward="false" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
           <folding />
         </state>
       </provider>
