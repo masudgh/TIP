@@ -1,9 +1,6 @@
 package com.homework.Trees;
 
-
-
-public class TreeMirror {
-
+public class TreeIdentical {
 
     static class Node {
         Node left, right;
@@ -16,22 +13,22 @@ public class TreeMirror {
     }
 
 
-    static boolean isMirrorTree(Node n1, Node n2){
+    static boolean isIdenticalTree(Node n1, Node n2){
 
         if(n1 == null && n2 == null) return true;
 
         if(n1.value == n2.value){
 
-            return (isMirrorTree( n1.right, n2.left) && isMirrorTree( n1.left, n2.right));
+            return (isIdenticalTree( n1.right, n2.right) && isIdenticalTree( n1.left, n2.left));
 
         }else {
 
             return false;
         }
+
+
+
     }
-
-
-
 
     public static void main (String [] ags) {
 
@@ -39,9 +36,9 @@ public class TreeMirror {
     Tree
              4                4
             / \              / \
-           3   8            8   3
+           3   8            3   8
           /     \          /     \
-         1       9        9       1
+         1       9        1       9
 
 
      */
@@ -65,33 +62,39 @@ public class TreeMirror {
         Node n31 = new Node(1);
         Node n41 = new Node(9);
 
-        root2.left = n21;
-        root2.right = n11;
-        n11.right = n31;
-        n21.left = n41;
+        root2.left = n11;
+        root2.right = n21;
+        n11.left = n31;
+        n21.right = n41;
 
-        System.out.println(isMirrorTree(root1, root2));
+        System.out.println(isIdenticalTree(root1, root2));
 
-         /*
+     /*
     Tree
              4                4
             / \              / \
-           3   8            8   3
+           3   8            3   8
           /     \          /     \
-         1       9        1       9
+         1       9        1       10
 
 
      */
 
 
+
+
+        root2 = new Node(4);
+
+        Node n12 = new Node(3);
+        Node n22 = new Node(8);
         Node n32 = new Node(1);
         Node n42 = new Node(9);
+        Node n52 = new Node(10);
+        root2.left = n12;
+        root2.right = n22;
+        n12.left = n32;
+        n22.right = n52;
 
-        root2.left = n2;
-        root2.right = n1;
-        n1.right = n42;
-        n2.left = n32;
-
-        System.out.println(isMirrorTree(root1, root2));
+        System.out.println(isIdenticalTree(root1, root2));
     }
 }
