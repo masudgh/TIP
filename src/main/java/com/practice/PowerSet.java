@@ -10,10 +10,31 @@ public class PowerSet {
         printPowerSet(arr,0, new int[0] );
     }
 
+    private static void printResult(int[] result){
+        System.out.print("{");
+        for(int i: result){
+            System.out.print(i + ", ");
+        }
+        System.out.print("}");
+        System.out.println();
+
+    }
     private static void printPowerSet(int [] arr, int i, int[] result){
 
-      //  if(i == result.)
+        int n = arr.length;
+        if (i == n) {
+            printResult(result);
+            return;
+        }
 
+        int [] newResult = new int [result.length+1];
+        for(int j=0; j< result.length; j++){
+            newResult[j] = result[j];
+        }
+        newResult[result.length]= arr[i];
+
+        printPowerSet(arr,i+1,result);
+        printPowerSet(arr,i+1,newResult);
     }
 
     public static void main (String [] args){

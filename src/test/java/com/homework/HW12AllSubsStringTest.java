@@ -9,8 +9,8 @@ public class HW12AllSubsStringTest {
 
     @Test
     public void printSubString() {
-       // subStrings.printSubString("hello");
-        subStrings.printSubString("geeks");
+        subStrings.printSubString("hello");
+       // subStrings.printSubString("geeks");
 
     }
 }

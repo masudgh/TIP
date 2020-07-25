@@ -13,8 +13,8 @@ public class GroupSum {
 
         if(i==n) return target ==0;
 
-        if (isGroupSum(arr, i+1, target-arr[i]) ) return true;
-        else if (isGroupSum(arr, i+1, target) ) return true;
+        if (isGroupSum(arr, i+1, target-arr[i]) ) return true;  //Select this number
+        else if (isGroupSum(arr, i+1, target) ) return true;   //Not select this number
 
         return false;
     }
