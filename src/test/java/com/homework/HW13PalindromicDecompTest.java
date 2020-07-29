@@ -1,8 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW13PalindromicDecomp;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class HW13PalindromicDecompTest {
     HW13PalindromicDecomp decompose =new HW13PalindromicDecomp();

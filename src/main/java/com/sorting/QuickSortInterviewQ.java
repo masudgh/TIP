@@ -3,6 +3,8 @@ package com.sorting;
 /*
  "how do you delete the duplicates from the array."
 
+ Quick Select
+
  */
 public class QuickSortInterviewQ {
 

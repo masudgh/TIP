@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 /*
 Give a set (array) of integers print all subsets(Powerset) of the set using Recursion. Create a

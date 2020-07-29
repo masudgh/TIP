@@ -10,7 +10,8 @@ public class Prob2GroupSum6Test {
     @Test
     public void groupSum6() {
         int [] list1 = {5,6,2};
-        assertTrue(sum6.groupSum6(0, list1,8) );
+        int [] list2 = {5,4,4,4,6,2};
+        assertTrue(sum6.groupSum6(0, list2,8) );
         assertFalse(sum6.groupSum6(0, list1,9) );
         assertFalse(sum6.groupSum6(0, list1,7) );
     }

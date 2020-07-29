@@ -1,5 +1,6 @@
 package com.homework;
 
+import com.homework.Recursive.Permutation;
 import org.junit.Test;
 
 public class PermutationTest {

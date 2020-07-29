@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Warmup;
 
 import java.util.HashSet;
 import java.util.Set;

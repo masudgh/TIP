@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 /*
 
@@ -11,7 +11,7 @@ https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/
  */
 public class HW14TreeDiameter {
 
-    static int maxDiameter =0;
+    static int maxDiameter =0;   //Remove global variable
 
     static class Node {
         Node left, right;

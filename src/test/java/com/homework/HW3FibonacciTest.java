@@ -1,8 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW3Fibonacci;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class HW3FibonacciTest {
 

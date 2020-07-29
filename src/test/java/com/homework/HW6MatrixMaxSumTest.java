@@ -1,5 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW6MatrixMaxSum;
+import com.homework.Recursive.HW6MatrixMaxSum2;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

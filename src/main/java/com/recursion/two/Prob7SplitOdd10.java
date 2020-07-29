@@ -61,11 +61,7 @@ public class Prob7SplitOdd10 {
             }
         }
 
-
         return false;
     }
-
-
-
 
 }

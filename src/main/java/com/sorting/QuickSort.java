@@ -1,7 +1,7 @@
 package com.sorting;
 
 /**
- *   QUICK SORT
+ *   QUICK SORT  -Unstable sort
  *   best= O(n log(n)) 	average=O(n log(n)) 	worst=O(n^2)
  *
  *
@@ -29,15 +29,15 @@ public class QuickSort {
         // pivot (Element to be placed at right position)
         int pivot = arr[high];
 
-        int i = (low - 1);  // Index of smaller element
+        int i = low-1 ;  // Index of smaller element
 
-        for (int j = low; j <= high- 1; j++)
+        for (int l = low; l <= high- 1; l++)
         {
             // If current element is smaller than the pivot
-            if (arr[j] < pivot)
+            if (arr[l] < pivot)
             {
                 i++;    // increment index of smaller element
-                swap (arr, i, j);
+                swap (arr, i, l);
             }
         }
         swap (arr, i + 1, high);

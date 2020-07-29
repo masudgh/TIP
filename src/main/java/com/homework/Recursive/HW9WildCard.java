@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 /*
 Input: 10?
 Output: 101, 100

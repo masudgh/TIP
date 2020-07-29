@@ -1,10 +1,12 @@
-package com.homework;
+package com.dynamic;
 
+import com.homework.Recursive.HW5GroupSum;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-public class HW5GroupSumTest {
+public class GroupSumDPTest {
     HW5GroupSum sum = new HW5GroupSum();
 
     @Test

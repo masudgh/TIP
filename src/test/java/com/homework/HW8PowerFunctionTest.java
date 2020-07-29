@@ -1,10 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW8PowerFunction;
 import org.junit.Test;
-
-import java.sql.Time;
-
-import static org.junit.Assert.*;
 
 public class HW8PowerFunctionTest {
     HW8PowerFunction powerFunction = new HW8PowerFunction();

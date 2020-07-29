@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 import java.util.ArrayList;
 import java.util.List;

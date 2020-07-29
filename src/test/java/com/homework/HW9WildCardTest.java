@@ -1,8 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW9WildCard;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class HW9WildCardTest {
     HW9WildCard wildCard = new HW9WildCard();

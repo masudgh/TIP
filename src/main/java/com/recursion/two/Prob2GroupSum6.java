@@ -25,14 +25,11 @@ public class Prob2GroupSum6 {
         if (sumNumbers(start + 1, nums, target - nums[start])) {
             return true;
         }
-        if(nums[start] == 6){
+        if(nums[start] == 6){  // When I choose number at line 25, if it was not used to meet target then the return is false
             return false;
         }
-        if (sumNumbers(start + 1, nums, target)) {
-            return true;
-        }
+        return (sumNumbers(start + 1, nums, target));
 
-        return false;
     }
 
 }

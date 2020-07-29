@@ -1,8 +1,7 @@
 package com.homework;
 
+import com.homework.Recursive.HW4PowerSet;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class HW4PowerSetTest {
     HW4PowerSet powerset = new HW4PowerSet();

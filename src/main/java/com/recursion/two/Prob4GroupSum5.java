@@ -118,9 +118,7 @@ public boolean groupSum5(int start, int[] nums, int target) {
 
        if( doGroupSum5( start+1, nums, target-nums[start])) return true;
 
-        if( doGroupSum5( start+1, nums, target ) ) return true;
-
-        return false;
+        return ( doGroupSum5( start+1, nums, target ) );
 
 
 

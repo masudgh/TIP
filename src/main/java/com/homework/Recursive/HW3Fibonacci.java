@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 /*
 Given a number n, print n-th Fibonacci Number using Recursion. Create a Recursion Tree to support

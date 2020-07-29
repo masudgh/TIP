@@ -1,4 +1,4 @@
-package com.homework;
+package com.dynamic;
 
 /*
 Given an array of ints, is it possible to choose a group of some of the ints, such that the group
@@ -9,7 +9,7 @@ groupSum(0, [2, 4, 8], 10) → true
 groupSum(0, [2, 4, 8], 14) → true
 groupSum(0, [2, 4, 8], 9) → false
  */
-public class HW5GroupSum {
+public class GroupSumDP {
 
     public boolean groupSum(int []  arr, int i, int target) {
 

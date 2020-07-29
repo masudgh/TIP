@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 /*
 Implement a power function to raise a double to an int power, including negative powers.
@@ -14,7 +14,7 @@ Suggested time: 10 minutes to do a brute-force and 15 with a trick that optimize
 
 public class HW8PowerFunction {
 
-    double  powBrut (double base, int exp){
+    public double  powBrut (double base, int exp){
         if(exp ==0) return 1;
         if(exp ==1) return base;
         if(exp ==2) return base*base;
@@ -26,7 +26,7 @@ public class HW8PowerFunction {
     }
 
 
-    double powOptimize(double base, int exp){
+    public double powOptimize(double base, int exp){
         if(exp ==0) return 1;
         if(exp ==1) return base;
 

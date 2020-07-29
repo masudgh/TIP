@@ -110,6 +110,10 @@ public class CheckBST {
     public static void main (String [] ags) {
 
     /*
+
+    8VN7LBLzg23M%
+
+    bk8bTf39#K
     Tree
              20
             / \

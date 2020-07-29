@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 
 /*
         Solve the N-queen problem using recursion. (There may be other ways of solving this problem,

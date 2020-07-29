@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.Recursive;
 /*
 Write a function isPalindrome() that takes a String as an input and returns
 True if the string is a palindrom otherwise False. Solve this using recursion. Do not use any loops.
