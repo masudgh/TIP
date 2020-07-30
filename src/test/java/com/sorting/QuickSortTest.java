@@ -21,4 +21,19 @@ public class QuickSortTest extends SortingBaseTest {
 
     }
 
+
+    @Test
+    public void doQuickSort2() throws Exception {
+
+
+        int [] arr = {2,1,3,0,3};
+
+        printArr("Print before sorting", arr);
+        qs.doQuickSort(arr);
+
+        printArr("Print after QUICK sorting", arr);
+
+
+    }
+
 }

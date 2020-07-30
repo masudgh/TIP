@@ -31,7 +31,7 @@ public class QuickSort {
 
         int i = low-1 ;  // Index of smaller element
 
-        for (int l = low; l <= high- 1; l++)
+        for (int l = low; l < high; l++)
         {
             // If current element is smaller than the pivot
             if (arr[l] < pivot)
