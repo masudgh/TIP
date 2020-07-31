@@ -1,6 +1,6 @@
-package com.homework.Recursive;
+package com.homework.Sorting;
 
-public class HW16SortAllCharofString {
+public class HW3SortAllCharofString {
 
     /*
     Sort an array of characters (ASCII only, not UTF8).
