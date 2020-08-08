@@ -26,12 +26,9 @@ public class CheckBST {
 
     // 5) Level order --(use BFS, single queue using count)
     static void printLevelOrderUseOneQueandCount(Node node) {
-
         if(node == null) return;
-
         Queue<Node> q1 = new LinkedList<>();
         q1.add(node);
-
 
         while(true){
 
@@ -40,7 +37,6 @@ public class CheckBST {
 
             while(levelNodeCount>0) {
 
-
                 if (q1.peek().left != null) {
                     q1.add(q1.peek().left);
 
@@ -48,20 +44,15 @@ public class CheckBST {
 
                 if (q1.peek().right != null) {
                     q1.add(q1.peek().right);
-
                 }
 
                 System.out.print(q1.peek().value + " ");
                 q1.remove();
                 levelNodeCount--;
-
             }
 
             System.out.println();
-
         }
-
-
     }
 
     static boolean isBST(Node node){
@@ -111,9 +102,6 @@ public class CheckBST {
 
     /*
 
-    8VN7LBLzg23M%
-
-    bk8bTf39#K
     Tree
              20
             / \

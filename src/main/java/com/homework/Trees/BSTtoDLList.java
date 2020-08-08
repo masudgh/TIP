@@ -1,0 +1,120 @@
+package com.homework.Trees;
+
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BSTtoDLList {
+
+    // 5) Level order --(use BFS, single queue using count)
+    private static void printLevelOrderUseOneQueandCount(Node node) {
+        if(node == null) return;
+        Queue<Node> q1 = new LinkedList<>();
+        q1.add(node);
+
+        while(true){
+
+            int levelNodeCount= q1.size();
+            if(levelNodeCount==0) break;
+
+            while(levelNodeCount>0) {
+
+                if (q1.peek().left != null) {
+                    q1.add(q1.peek().left);
+
+                }
+
+                if (q1.peek().right != null) {
+                    q1.add(q1.peek().right);
+                }
+
+                System.out.print(q1.peek().value + " ");
+                q1.remove();
+                levelNodeCount--;
+            }
+
+            System.out.println();
+        }
+    }
+
+    private static void printDLL (Node head){
+        System.out.println();
+        while(head.right!=null){
+            System.out.print(head.value+" ");
+            head = head.right;
+        }
+        System.out.println();
+    }
+
+    static class Node {
+        Node left, right;
+        int value;
+        Node( int value) {
+            this.left = null;
+            this.right = null;
+            this.value = value;
+        }
+    }
+
+
+
+    static Node head;
+    static Node prev = null;
+
+    private static void treeToList(Node root){
+
+        if(root == null) return;
+
+        treeToList(root.left);  // travel to the left
+
+        if(prev == null) {
+            head = root;
+        }else { //make both way connection
+
+            root.left = prev;
+            prev.right =root;
+        }
+
+        prev = root; //move prev pointer
+        treeToList(root.right);  // travel to the right
+    }
+
+
+
+
+
+    public static void main (String [] ags) {
+
+        /*
+    Tree
+             20
+            / \
+           15  22
+          /     \
+         10      30
+        / \     /
+       5  11   25
+     */
+
+        Node root = new Node(20);
+        Node n1 = new Node(15);
+        Node n2 = new Node(22);
+        Node n3 = new Node(10);
+        Node n4 = new Node(30);
+        Node n5 = new Node(5);
+        Node n6 = new Node(11);
+        Node n7 = new Node(25);
+        root.left = n1;
+        root.right = n2;
+        n1.left = n3;
+        n2.right = n4;
+        n3.left = n5;
+        n3.right = n6;
+        n4.left = n7;
+
+        System.out.println("Original Tree BST : ");
+        printLevelOrderUseOneQueandCount(root);
+        treeToList(root);
+        printDLL(head);
+    }
+}
