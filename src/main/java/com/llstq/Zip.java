@@ -27,7 +27,7 @@ public class Zip {
 
     }
 
-    //ZIP method
+    //ZIP method- BRUTFORCE
     private static Node makeZip(Node list){
         if(list == null) return null;
 
@@ -79,12 +79,64 @@ public class Zip {
         return head;
     }
 
+
+    //ZIP method- Efficient
+    private static Node makeZipEff(Node node){
+        if(node == null) return null;
+
+        Node head =node;
+        Node mid = node;
+        Node tail = node;
+
+        //Slow fast approach to detect tail and middle
+        while(mid.next!=null){
+            if(tail.next.next !=null)
+                tail = tail.next.next;
+            else{
+                tail = tail.next;
+                break;
+            }
+            mid = mid.next;
+        }
+        mid = mid.next;
+
+        Node curr = mid;
+        Node prev =mid;
+
+        //Reverse second half (mid to tail)
+        while(curr !=null){
+            Node tmp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr =tmp;
+        }
+        tail = prev;
+        mid.next = null;
+
+
+        //Merge two list
+        curr =head;
+        Node curr2=tail;
+        while(curr2.next!=null){
+            Node tmp = curr;
+            Node tmp2 = curr2;
+            curr2 = curr2.next;
+            curr = curr.next;
+            tmp.next= tmp2;
+            tmp2.next =curr;
+        }
+
+
+
+        return head;
+
+    }
     //main
     public static void main(String [] args){
         int [] arr = {1,2,3,4,5,6};
         Node list = buildList(arr);
         printList("Original list", list);
-        Node zip = makeZip(list);
+        Node zip = makeZipEff(list);
         printList("Zip list", zip);
 
 
