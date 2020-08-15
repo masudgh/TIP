@@ -43,7 +43,7 @@ public class MergeKArrays {
     }
 
 
-    private static void mergeArraysEff(int [][] arrays){
+    private static void mergeArraysEff2(int [][] arrays){
 
         Queue<Integer> pq = new PriorityQueue<>();
         List<Integer> sortedArr = new ArrayList<>();
@@ -71,9 +71,47 @@ public class MergeKArrays {
     }
 
 
+    private static void mergeArraysEff(int [][] arrays){
+        Queue<Integer> pq = new PriorityQueue<>();
+
+
+        int k = arrays.length;
+        int n = arrays[0].length;
+
+        int [] result = new int [n*k];
+
+        for (int i=0; i<k; i++) {
+            pq.offer (arrays[i][0]);
+        }
+
+
+
+        int col = 1;
+        int i=0;
+        while(!pq.isEmpty()) {
+
+            int val = pq.poll();
+            result[i++] = val;
+
+            for (int row=0; row<k && col <arrays[row].length; i++) {
+                pq.offer (arrays[row][col++]);
+                val = pq.poll();
+                result[i++] = val;
+            }
+
+        }
+
+
+        System.out.print("Sorted Array: ");
+        for (int val : result) {
+            System.out.print(val + ", ");
+        }
+        System.out.println();
+
+    }
 
     public static void main(String [] args){
-        int [] [] arrays1 = {
+      /*  int [] [] arrays1 = {
                 {1, 3} ,
                 {2, 4, 6},
                 {0, 9, 10, 11}
@@ -98,6 +136,14 @@ public class MergeKArrays {
                 {1, 6, 4}
         };
         mergeArraysEff(arrays4);
+
+*/
+
+        int[][] arrays5 = {
+                {100,200,300,400},
+                {1,2,3,4    },
+        };
+        mergeArrays(arrays5);
 
     }
 }
