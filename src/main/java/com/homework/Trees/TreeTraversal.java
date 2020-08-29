@@ -25,6 +25,16 @@ public class TreeTraversal {
     }
 
 
+    // 1)
+    // LCR left current right
+    static void printInOrder2(Node node) {
+        if (node != null) {
+            printInOrder(node.left);
+            System.out.print(" " + node.value);
+            printInOrder(node.right);
+        }
+    }
+
 
     // 1)
     // LCR left current right
@@ -214,6 +224,8 @@ public class TreeTraversal {
         n4.left = n7;
 
         System.out.println("Inorder print .....");
+        printInOrder(root);
+        System.out.println();
         printInOrder(root);
         System.out.println();
 

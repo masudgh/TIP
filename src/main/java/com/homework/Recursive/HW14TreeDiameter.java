@@ -1,5 +1,7 @@
 package com.homework.Recursive;
 
+import com.homework.Trees.TreeTraversal;
+
 /*
 
 The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes.
@@ -45,6 +47,28 @@ public class HW14TreeDiameter {
         return 1 + Math.max(nodeLeft, nodeRight);
     }
 
+    // 1)
+    // LCR left current right
+    static void printInOrder2(Node node) {
+        if (node != null) {
+            printInOrder2(node.left);
+            System.out.print(" " + node.value);
+            printInOrder2(node.right);
+        }
+    }
+
+
+
+    // 1)
+    // LCR left current right
+    static void printInOrder(Node node, Node nextNode) {
+        if (node != null) {
+            printInOrder(node.left,nextNode);
+            if(node.value == nextNode.value) System.out.print(" " + node.value);
+            printInOrder(node.right,nextNode);
+        }
+    }
+
     public static void main (String [] ags) {
 
     /*
@@ -77,7 +101,10 @@ public class HW14TreeDiameter {
         System.out.print(" THe maximum diameter is : ");
         System.out.println(calcDiameterOfTree(root) ) ;
 
-
+        printInOrder(root,n1);
+        System.out.println();
+        printInOrder2(root);
+        System.out.println();
              /*
     Tree
              4
