@@ -249,6 +249,7 @@ public class MergeKArrays {
         printResult(result10);
 
 
+
         int[][] arrays6 = {
                 {400,300,200,100},
                 {20,10},
@@ -267,7 +268,6 @@ public class MergeKArrays {
         System.out.println (" n *log k solutions [Order independent] ...... ");
         printResult(result11);
         printResult(result12);
-
     }
 
     private static void printResult(int [] arr){
