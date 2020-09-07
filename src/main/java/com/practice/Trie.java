@@ -36,6 +36,33 @@ public class Trie {
     }
 
     boolean prefixMatches(String str){
+        TrieNode node = root;
+
+        for(int i=0; i<str.length(); i++) {
+             char ch = str.charAt(i);
+             TrieNode child =  node.children.get(ch);
+             if(child == null) return false;
+             //if(child.isWord) break;
+             node = child;
+        }
+
+        return true;
+    }
+
+    boolean isWordExist(String str){
+        TrieNode node = root;
+
+        for(int i=0; i<str.length(); i++) {
+            char ch = str.charAt(i);
+            TrieNode child =  node.children.get(ch);
+            if(child == null) {
+                return false;
+            }else{
+                if(child.isWord && i ==str.length()-1) return true;
+            }
+
+            node = child;
+        }
 
         return false;
     }
