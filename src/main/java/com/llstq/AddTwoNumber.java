@@ -71,9 +71,12 @@ public class AddTwoNumber {
             sumPrev = sumCurr;
 
         }
-        if(leftOver >0) {
-            sumCurr = new Node(leftOver);
+        while(leftOver >0) {
+            digit1= leftOver%10;
+            leftOver = leftOver/10;
+            sumCurr = new Node(digit1);
             sumPrev.next = sumCurr;
+            sumPrev = sumCurr;
         }
 
         return sumHead;
@@ -82,21 +85,38 @@ public class AddTwoNumber {
 
     public static void main (String [] args) throws IOException {
 
-        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
-        BufferedReader buffer = new BufferedReader(reader);
-        String num1 = buffer.readLine();
-        String num2 = buffer.readLine();
-        Node num1List = createList(num1);
-        Node num2List = createList(num2);
+        Node num1List = createList("1");
+        Node num2List = createList("2,3");
         printList("Number 1" , num1List);
         printList("Number 2", num2List);
 
         Node sumHead =  addNumList(num1List, num2List);
 
         printList("Sum of number 1 & number 2", sumHead);
+
+
+        num1List = createList("8,8,9");
+        num2List = createList("3,0,9");
+        printList("Number 1" , num1List);
+        printList("Number 2", num2List);
+
+        sumHead =  addNumList(num1List, num2List);
+
+        printList("Sum of number 1 & number 2", sumHead);
+
+
+        num1List = createList("1,2,3,4,5,6,7,9");
+        num2List = createList("9");
+        printList("Number 1" , num1List);
+        printList("Number 2", num2List);
+
+        sumHead =  addNumList(num1List, num2List);
+
+        printList("Sum of number 1 & number 2", sumHead);
     }
 
 
+    //Utility Method
     private static Node createList(String num){
         Node numberList;
         if(num == null) return null;
@@ -123,11 +143,11 @@ public class AddTwoNumber {
     // PRINT Utility Method
     private static void printList(String str, Node list){
         System.out.print(str+ " : ");
-        while(list.next != null){
+        while(list != null){
             System.out.print( list.val+" -> ");
             list = list.next;
         }
-        System.out.print( list.val);
+        System.out.print( "NULL");
         System.out.println();
 
     }
