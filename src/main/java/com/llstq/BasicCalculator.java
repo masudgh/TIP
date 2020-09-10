@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /*
@@ -44,56 +46,76 @@ public class BasicCalculator {
 
         Stack<Integer> stack = new Stack<>();
 
-        int calc =0;
+        int result =0;
+        int sign =1;
+        int num =0;
 
 
-        for (int i = 0; i < arr.length; i++) {
-            if ( Character.isDigit(arr[i]))
-                stack.push( arr[i] - '0');
+        for (int i = 0; i < line.length(); i++) {
+            char c = line  .charAt(i);
 
-            if (arr[i] == '/') {
-                int tmp = (arr[i+1] - '0') /stack.peek();
-                stack.pop();
-                stack.push(tmp);
-                i++;
-            }
+            if ( Character.isDigit(c )){
+                num = 10*num + (int) (c-'0');
+            } else if (c  == '+') {
+                result += sign*num;
+                num =0;
+                sign =1;
 
-            if (arr[i] == '*') {
-                int tmp = (arr[i+1]- '0')*stack.peek();
-                stack.pop();
-                stack.push(tmp);
-                i++;
-            }
+            } else if (c  == '-') {
+                result += sign * num;
+                num = 0;
+                sign = -1;
 
-            if (arr[i] == '-') {
-                int tmp = (arr[i+1]- '0')-stack.peek();
-                stack.pop();
-                stack.push(tmp);
-                i++;
-            }
+            } else if (c  == '*') {
+                result += sign*num;
+                sign =num; //multiply
+                num =0;
 
-            if (arr[i] == '+') {
-                int tmp = (arr[i+1]- '0')+stack.peek();
-                stack.pop();
-                stack.push(tmp);
-                i++;
+
+            } else if (c  == '/') {
+                result += sign*num;
+                sign = num; //division
+                num =0;
+
+
+            }else if (c  ==  '(') {
+                stack.push(result);
+                stack.push(sign);
+                sign =1;
+                result =0;
+            }else if (c  ==  ')') {
+                result += sign* num;
+                num =0;
+
+                result *= stack.pop();
+                result += stack.pop();
             }
 
 
         }
 
+        if(num !=0) result += sign* num;
+
+
+        System.out.println(result);
 
 
     }
 
     public static void main (String [] args) throws IOException {
-        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
+       /* InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
         BufferedReader buffer = new BufferedReader(reader);
         String line = buffer.readLine();
+*/
+       List<String> line = new ArrayList<>();
+       line.add("3+(2*2)");
+       line.add(" 3+2");
+       line.add("3+5-2");
 
-        while(!line.isEmpty()){
-            calculate(line);
-            line = buffer.readLine();
+       int i=0;
+        while(i < line.size()){
+            calculate(line.get(i++));
+          //  line = buffer.readLine();
         }
     }
 }
