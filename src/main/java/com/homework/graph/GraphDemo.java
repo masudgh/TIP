@@ -125,26 +125,9 @@ class SimpleGraph {
 
     }
 
-    //non-weight graph
-   /* public int findShortestDistance(int start, int end){
 
 
-        LinkedList<Integer> list = null;
-        int  noHops = 0;
-        for(int i=0; i < size; i++){
-            if( i == start){
-                noHops =  findShortestDistance( end);
-                break;
-            }
-        }//For loop of Adjacent list
-
-        //For loop of Adjacent list
-        return noHops;
-
-    }*/
-
-
-    //non-weight graph
+    // Shortest distance - non-weight graph (Use BSF) -best available approach
     public int findShortestDistance( int start, int end){
         int noHops =0 ;
         Deque<QueueNode> deque = new ArrayDeque<>();
