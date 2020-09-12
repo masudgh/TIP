@@ -11,18 +11,17 @@ Implement a simple unweighted Graph class with following operations:
 
 
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
- class QueueNode{
-    int vertex;
-    int dis; //Distance between start to this node
+class QueueNode{
+     int vertex;
+     int dis; //Distance between start to this node
+     List<QueueNode> nodeList;
 
      public QueueNode(int vertex, int dis) {
          this.vertex = vertex;
          this.dis = dis;
+         nodeList = new ArrayList<>();
      }
  }
 
