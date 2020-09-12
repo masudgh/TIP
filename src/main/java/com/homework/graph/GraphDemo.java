@@ -57,6 +57,16 @@ class SimpleGraph {
 
     }
 
+    public boolean hasVertex(int vertex){
+        LinkedList<Integer> list;
+        try {
+            list=adjacentList[vertex];
+            return list != null;
+        }catch (ArrayIndexOutOfBoundsException e) {
+            return false;
+        }
+    }
+
     //BFS Printing
     public void printUsingBFS(){
         Deque<Integer> deque = new ArrayDeque<>();
