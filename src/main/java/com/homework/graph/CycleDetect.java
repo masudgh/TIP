@@ -42,7 +42,6 @@ class CycleGraph extends SimpleGraph{
 
         isVisited[i] = true;
         recStack.add(i);
-        System.out.print(i + " ");
 
         LinkedList<Integer> list = adjacentList[i];
         if(list != null) {
