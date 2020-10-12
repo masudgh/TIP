@@ -1,5 +1,6 @@
 package com.homework.Trees;
 
+
 /*
 Given a binary tree, find the largest Binary Search Tree (BST), where largest means BST with
 largest number of nodes in it. The largest BST must include all of its descendants.
@@ -11,6 +12,7 @@ public class LargestBST {
     static class Node {
         Node left, right;
         int value;
+        Node(){}
         Node( int value) {
             this.left = null;
             this.right = null;
@@ -18,98 +20,74 @@ public class LargestBST {
         }
     }
 
-    static int findLargestBST2(Node node) {
-        if (node == null) return 0;
-        int countLeft = 0;
-        int countRight = 0;
 
-        if(isBST(node)) {
-           // if(node.left!=null && node.right!=null)
-          //     return 3;
-          //  else if (node.left!=null || node.right!=null)
-                return 2;
-          //  else
-          //      return 1;
-        }else {
+    static Node minNode = new Node();
+    static Node maxNode = new Node();
 
-            countLeft = findLargestBST2(node.left);
-            countRight = findLargestBST2(node.right);
-            return Math.max(countLeft, countRight);
-        }
-
-
+    static int findLargestBSTEff(Node node) {
+        minNode.value = Integer.MAX_VALUE;
+        maxNode.value = Integer.MIN_VALUE;
+        boolean [] isBST =new boolean[1]; //Store if the tree is BST from this node to leaf
+        int[] maxBSTSize = new int[1]; // Store max BST size along the search
+        findLargestBST(node,isBST,maxBSTSize );
+        return maxBSTSize[0];
     }
 
-    static boolean isBST(Node node){
-        if(node == null) return false;
+    static int findLargestBST(Node node, boolean[] isBST, int [] maxBSTSize) {
 
-        if(node.left !=null && node.right !=null) {
-            if(isRightBranchBST(node.right, node) && isLeftBranchBST(node.left, node))
-                return isBST(node.left) && isBST(node.right);
-            else
-                return false;
-        }else if (node.left !=null){
-            return isBST(node.left);
-        }else if (node.right !=null) {
-            return isBST(node.right);
+        if (node == null) {
+            minNode.value = Integer.MAX_VALUE;
+            maxNode.value = Integer.MIN_VALUE;
+            isBST[0] = true;
+            return 0;
         }
 
+        int leftCount=0;
+        int rightCount=0;
 
-        return true;
-    }
+        boolean leftValid = false;
+        boolean rightValid = false;
+
+        leftCount =  findLargestBST(node.left, isBST, maxBSTSize);
+        leftValid =  maxNode.value < node.value && isBST[0];
+
+        int tempMin = minimum(node.value, minNode.value);
+        int tempMax = maximum(node.value, maxNode.value);
+
+        rightCount =  findLargestBST(node.right, isBST, maxBSTSize);
+        rightValid =  minNode.value > node.value && isBST[0];
+
+        minNode.value = minimum(tempMin, minNode.value);
+        maxNode.value = maximum(tempMax, maxNode.value);
 
 
-    static boolean isRightBranchBST(Node node , Node parent){
-
-        if (parent.value < node.value){
-            if(node.left ==null && node.right ==null) return true;
-            if (node.left !=null) return isRightBranchBST(node.left, parent);
-            else
-                return isRightBranchBST(node.right, parent);
-
-        }
-        return false;
-    }
-
-    static boolean isLeftBranchBST(Node node , Node parent){
-
-        if (parent.value > node.value){
-            if(node.left ==null && node.right ==null) return true;
-            if (node.left !=null) return isLeftBranchBST(node.left, parent);
-            else
-                return isLeftBranchBST(node.right, parent);
-
-        }
-        return false;
-    }
-
-    static int findLargestBST1(Node node) {
-        if (node == null) return 0;
-        int countLeft = 0;
-        int countRight = 0;
-        if (node.left != null && node.right != null)//{
-            if (node.value > node.left.value && node.value < node.right.value) {
-                return 2;
+        if (leftValid && rightValid){
+            isBST[0] = true;
+            if((1 + leftCount + rightCount) >maxBSTSize[0]) {
+                maxBSTSize[0] = 1 + leftCount + rightCount;
             }
-            /*else {
-                countLeft += findLargestBST1(node.left);
-                countRight += findLargestBST1(node.right);
-            }
-        }  else if (node.left == null && node.right == null){
-            return 1;
-        }else{
-            countLeft += findLargestBST1(node.left);
-            countRight += findLargestBST1(node.right);
-        }*/
+            return 1 + leftCount + rightCount;
+        }
 
-        countLeft += findLargestBST1(node.left);
-        countRight += findLargestBST1(node.right);
-        return Math.max(countLeft, countRight);
+        isBST[0] = false;
+        return -1;
+    }
+
+    private static int minimum(int a, int b)
+    {
+        if (a < b) return a;
+        return b;
+    }
+
+    private static int maximum(int a, int b)
+    {
+        if (a > b) return a;
+        return b;
     }
 
 
     public static void main (String [] ags) {
-
+    
     /*
     Tree
               10
@@ -138,10 +116,8 @@ public class LargestBST {
 
 
         System.out.println("Max BST ...");
-        int count1 = findLargestBST2(root);
+        int count1 = findLargestBSTEff(root);
         System.out.println(count1);
-
-
 
         /*
     Tree
@@ -162,7 +138,7 @@ public class LargestBST {
         Node n25 = new Node(9);
         Node n26 = new Node(14);
         Node n27 = new Node(13);
-        Node n28 = new Node(146);
+        Node n28 = new Node(16);
 
         root2.left = n21;
         root2.right = n22;
@@ -174,7 +150,7 @@ public class LargestBST {
         n26.right = n28;
 
         System.out.println("Max BST ...");
-        int count2 = findLargestBST2(root2);
+        int count2 = findLargestBSTEff(root2);
         System.out.println(count2);
 
     }
