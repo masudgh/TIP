@@ -45,6 +45,9 @@ public class MergeKArrays {
 
     private static void mergeArraysEff2(int [][] arrays){
 
+
+
+
         Queue<Integer> pq = new PriorityQueue<>();
         List<Integer> sortedArr = new ArrayList<>();
         int i = 0;
@@ -72,6 +75,10 @@ public class MergeKArrays {
 
 
     private static void mergeArraysEff(int [][] arrays){
+
+
+
+
         Queue<Integer> pq = new PriorityQueue<>();
 
 
@@ -143,7 +150,7 @@ public class MergeKArrays {
                 {100,200,300,400},
                 {1,2,3,4    },
         };
-        mergeArrays(arrays5);
+        mergeArraysEff(arrays5);
 
     }
 }
