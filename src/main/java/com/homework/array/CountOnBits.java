@@ -11,14 +11,7 @@ public class CountOnBits {
         for(int n: arr) {
             while (n != 0) {
                 n = n & n - 1;
-
-                if(map.containsKey(n))
-                {
-                    return (count + map.get(n));
-                }else{
-                    count ++;
-                    map.put(n, count);
-                }
+                count++;
             }
         }
         System.out.println(count);
