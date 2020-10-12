@@ -42,13 +42,32 @@ public class SumZero {
     //O (log n) sol
     private static boolean isSumZeroHashing(int [] arr){
 
-        Set<Integer> map = new HashSet<>();
+        Map<Integer, Integer> map = new HashMap<>();
         int n = arr.length;
         int sum =0;
         for(int i=0; i< n; i++){
             sum+=arr[i];
-            if( arr[i] ==0 || sum ==0 || map.contains(sum)) return true;
-            map.add(sum);
+            if( arr[i] ==0 ){
+                System.out.println(arr[i]);
+                return true;
+            }
+
+            if(sum ==0 ){
+                for(int j=0; j<=i; j++){
+                    System.out.print(arr[j]+",");
+                }
+                System.out.println();
+                return true;
+            }
+            if(map.containsKey(sum)) {
+                int m = map.get(sum);
+                for(int j=m+1; j<=i; j++){
+                    System.out.print(arr[j]+",");
+                }
+                System.out.println();
+                return true;
+            }
+            map.put(sum, i);
         }
         return  false;
     }
