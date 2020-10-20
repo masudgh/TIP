@@ -14,11 +14,10 @@ public class MaxSum {
         int [][] dp = new int [matrix.length][matrix[0].length];
         int row = matrix.length-1;
         int col = matrix [0].length -1;
-
+     //   System.out.println(row+","+col);
         dp [row][col] = matrix[row][col]; // base case 1
 
         for(int c=col-1; c>=0 ; c--){
-
             dp [row][c] = matrix[row][c] + matrix[row][c+1]; // base cond 2
         }
 
@@ -33,10 +32,17 @@ public class MaxSum {
                 int rightSum = matrix[r][c] + dp [r][c+1];
                 int downSum = matrix[r][c] + dp [r+1][c];
 
+           /*     if(rightSum>downSum){
+                    System.out.println(r+","+c+1);
+                }else{
+                    System.out.println(r+1+","+c);
+                }*/
+
                 dp[r][c] = Math.max(rightSum, downSum) ; // base cond 4
             }
         }
 
+      //  System.out.println("0,0");
         return dp[0][0];
 
     }
@@ -61,6 +67,11 @@ public class MaxSum {
                 { 7,8,9}
         };
 
+
+        int [] [] arr2 = {
+                { 3,7 },
+                { 9,8}
+        };
 
         System.out.print(maxSumDP(arr));
 
