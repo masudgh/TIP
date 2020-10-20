@@ -1,7 +1,22 @@
 package com.dynamic;
 
 
+/*
+Given a matrix mat[][] of dimensions N * M, the task is to find the path from the top-left cell (0, 0) to the bottom-right cell (N – 1, M – 1) of the given matrix such that sum of the elements in the path is maximum. The only moves allowed from any cell (i, j) of the matrix are (i + 1, j) or (i, j + 1).
 
+Examples:
+
+Input: mat[][] = {{3, 7}, {9, 8}}
+Output: 20
+Explanation:
+Path with maximum sum is 3 => 9 => 8 as 20.
+
+Input: mat[][] = {{1, 2}, {3, 5}}
+Output: 9
+Explanation:
+Path with maximum sum is 1 => 3 => 5 as 9
+
+ */
 public class MaxSum {
 
     static int[][] directions ={

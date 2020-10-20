@@ -1,15 +1,26 @@
 package com.dynamic;
 
-import java.util.Arrays;
+/*
+Given weights and values of n items, put these items in a knapsack of capacity W
+to get the maximum total value in the knapsack. In other words, given two integer arrays
+val[0..n-1] and wt[0..n-1] which represent values and weights associated with n items respectively.
+ Also given an integer W which represents knapsack capacity, find out the maximum value subset of val[] such
+ that sum of the weights of this subset is smaller than or equal to W. You cannot break an item, either pick the
+ complete item or don’t pick it (0-1 property).
+
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+ */
 
 public class KnapSackDemo {
 
 
+    //Recursive method
     public static int knapsack(int [] wt, int [] val, int w){
         return knapsack( wt,  val, wt.length , w);
     }
 
 
+    //Recursive method
     public static int knapsack(int [] wt, int [] val, int i, int w){
 
         if (i <= 0 ) return 0;
@@ -23,72 +34,37 @@ public class KnapSackDemo {
         );
     }
 
+    //DP method
     public static int knapsackDP(int [] wt, int [] val, int w){
         int [] [] dp = new int [wt.length+1][w+1];
 
-        Arrays.fill(dp[0], 0);
-
-        for(int i =0; i <dp.length; i++){
-            dp[i][0] =0;
-        }
-
-
         for(int i =1; i< dp.length; i++){
-
             for(int j =0; j <= w; j++){
-
                 if(wt[i-1] > j) {
                     dp[i][j] =dp[i-1][j];
                 }else{
                     dp[i][j] =  Math.max(
-                            dp[i-1][j],
-                            val[i-1] + dp [i-1][ j- wt[i-1]]
+                        dp[i-1][j],
+                        val[i-1] + dp [i-1][ j- wt[i-1]]
                     );
                 }
-
             }
-
         }
-
         return dp[dp.length-1][w];
     }
 
     public static void main(String [] args){
-     /*   int [] wt = {1,2,3};
-        int [] val = {16,10,12};
-        int w = 5;
 
 
-        int maxVal = knapsack(wt,val,w);
+        int [] weights = {1,5,10,20,100};
+        int [] values = {1,5,10,20,100};
 
-        System.out.println("Max value " + maxVal+ " within weight "+w);
+        int weightLimit = 50;
+        int [] weights2 = {10,20,30};
+        int [] values2 = {60,100,120};
 
-        maxVal = knapsackDP(wt,val,w);
-        System.out.println("Max value " + maxVal+ " within weight "+w);
-
-
-        int [] wt2 = {12,1,2,1,4};
-        int [] val2 = {4,2,2,1,10};
-
-        w = 15;
-
-        maxVal = knapsack(wt2,val2,w);
-
-        System.out.println("Max value " + maxVal+ " within weight "+w);
-
-        maxVal = knapsackDP(wt2,val2,w);
-        System.out.println("Max value " + maxVal+ " within weight "+w);
-
-      */
-
-        int [] moneyWt = {1,5,10,20,100};
-        int [] moneyCount = {1,5,10,20,100};
-
-        int betAmount = 50;
-
-
-        int maxVal = knapsackDP(moneyWt,moneyCount,betAmount);
-        System.out.println("Pay amount  " + maxVal+ " for bet amount "+betAmount);
+        int maxVal = knapsackDP(weights2,values2,weightLimit);
+        System.out.println("Max Value   " + maxVal+ " for the limit of weight "+weightLimit);
 
     }
 
