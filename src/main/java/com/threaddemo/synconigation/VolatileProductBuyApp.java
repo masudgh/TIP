@@ -38,7 +38,7 @@ class BuyProcessor implements Runnable  {
 
 public class VolatileProductBuyApp {
 
-    private  static volatile   OrderService order;  // These variable are shared among thread
+    private  static volatile  OrderService order;  // These variable are shared among thread
 
     static class  BuyProcessor implements Runnable  {
         private String name;

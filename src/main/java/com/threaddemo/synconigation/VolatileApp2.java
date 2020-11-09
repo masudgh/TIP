@@ -50,13 +50,9 @@ public class VolatileApp2 {
         }catch(Exception e){
 
         }
-
-
         System.out.println(cache);
 
     }
-
-
 
 }
 

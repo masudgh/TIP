@@ -48,7 +48,7 @@ public class CoinChangeRecDP {
             path.add(coins[i]);
             ArrayList<Integer> b = new ArrayList<>();
             b.addAll(path);
-            getSubsetsRec(coins, i-1, target-coins[i], path, map);
+            getSubsetsRec(coins, i-1, target-coins[i], b, map);
         }
     }
 
@@ -71,7 +71,7 @@ public class CoinChangeRecDP {
 
         // Fill rest of the entries in dp[][]
         for (int i = 1; i < numOfCoins; ++i) { // Rows ... number of coins available
-            for (int j = 0; j < target + 1; ++j) { // cols ... the target amount
+            for (int j = 1; j < target + 1; ++j) { // cols ... the target amount
                 if( j >= coins[i]){
                     dp[i][j] = (dp[i - 1][j] || dp[i - 1][j - coins[i]]);
                 }else{
@@ -127,7 +127,7 @@ public class CoinChangeRecDP {
         int[] denominations1 = {1, 8, 1,1,5, 3};
         int target1 = 11;
 
-        findMinSubSetOfTarget(denominations1, target1);
+        findMinSubSetOfTarget(denominations0, target0);
 
     }
 

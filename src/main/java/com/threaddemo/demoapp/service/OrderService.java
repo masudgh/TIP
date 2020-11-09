@@ -15,19 +15,26 @@ public class OrderService {
         this.data = data;
     }
 
-    public Map<Product, Boolean> setOrder(List<Product> plist){
+    public OrderService() {
+    }
+
+    public void setData(MockData data) {
+        this.data = data;
+    }
+
+    public Map<Product, Boolean> setOrder(List<Product> productList){
         //Check inventory and return confirmation;
         Map<Product, Boolean> map = new HashMap<>();
-        for(Product prod: plist) {
-            if (data.isProductAvailable(prod))
+        for(Product product: productList) {
+            if (data.isProductAvailable(product))
             {
-                if (data.deleteProduct(prod))
-                    map.put(prod,true);
+                if (data.deleteProduct(product))
+                    map.put(product,true);
                 else
-                    map.put(prod, false);
+                    map.put(product, false);
             }
             else {
-                map.put(prod, false);
+                map.put(product, false);
             }
         }
         return map;
